@@ -56,4 +56,25 @@ class Question
   def replies
     reply = Reply.find_by_question_id(@id)
   end
+
+  def followers
+    Question_Follow.followers_for_question_id(@id)
+  end
+
+  def most_followed(n)
+    Question_Follow.most_followed_questions(n)
+  end
+
+
+  def likers
+    Question_Like.likers_for_question_id(@id)
+  end
+
+  def num_likes
+    Question_Like.num_likes_for_question_id(@id)
+  end
+
+  def most_liked(n)
+    Question_Like.most_liked_questions(n)
+  end
 end
