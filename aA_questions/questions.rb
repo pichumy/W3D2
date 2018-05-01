@@ -1,6 +1,17 @@
 require_relative 'database'
 require_relative 'users'
 
+#table = ID TITLE BODY AUTHOR QUESTION_ID USER_ID
+#        1                        1
+#        2                        2
+#        3                        NULL
+#        1                        1
+
+#Question Likes
+# QUESTION_ID USER_ID
+# 1         4
+# 2         3
+# 1         3
 
 class Question
 
